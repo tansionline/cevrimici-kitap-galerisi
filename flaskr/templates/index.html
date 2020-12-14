@@ -14,6 +14,12 @@
 
 {% if session['logged_in'] %}
     <h5>Welcome, {{session['username'] }}</h5>
+    <form method="POST">
+        {{form.search}}
+        <button type="submit">Search</button>
+        
+    </form>
+    {{ result }}
 {% endif %}
 
 {% endblock body %}
